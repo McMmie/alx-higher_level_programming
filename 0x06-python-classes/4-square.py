@@ -20,16 +20,23 @@ class Square:
         Args:
             size (no type): size has no type yet
             """
-        self.size = size
+        self.__size = size
 
         @property
         def size(self):
             """ It retrieves the private instance attribute
+            return:
+                An attribute
             """
             return self.__size
 
         @size.setter
         def size(self, value):
+            """
+            Setter
+            Args:
+                value(int): an integer
+            """
             if not isinstance(value, int):
                 raise TypeError("size must be an integer")
             if value < 0:
