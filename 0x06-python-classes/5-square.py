@@ -52,16 +52,16 @@ class Square:
         return (self.__size) ** 2
 
     def my_print(self):
-       """
-       prints the square with character '#'
+        """
+        prints the square with character '#'
 
-       """
-       for i in range(self.__size):
-           for i in range(self.__size):
-               print("#", end="")
-            
-           print('')
+        """
+        for i in range(self.__size):
+            for i in range(self.__size):
+                print("#", end="")
 
-       """Alternatively,
-       print("\n".join(["#" * self.__size for rows in range(self.__size)]))
-       """
+            print('')
+
+        """Alternatively,
+        print("\n".join(["#" * self.__size for rows in range(self.__size)]))
+        """
