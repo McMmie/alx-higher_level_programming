@@ -12,13 +12,13 @@ def list_division(my_list_1, my_list_2, list_length):
             new_list.append(result)
 
         except IndexError:
+            print("out of range")
             new_list.append(0)
         except ZeroDivisionError:
             new_list.append(0)
             print("division by 0")
         except (ValueError, TypeError):
             print("wrong type")
-            print("out of range")
             new_list.append(0)
         finally:
             i += 1
