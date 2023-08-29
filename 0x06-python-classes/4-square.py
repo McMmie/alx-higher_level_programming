@@ -20,7 +20,7 @@ class Square:
         Args:
             size (no type): size has no type yet
             """
-        self.__size = size
+        self.size = size
 
         @property
         def size(self):
