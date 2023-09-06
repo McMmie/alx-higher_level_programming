@@ -10,13 +10,17 @@ class LockedClass:
     """
     this is a locked class example
     """
+
     def __setattr__(self, name, value):
         """
         If the attribute name is 'first_name', it allows setting it
         Args:
             name(str): Instance to be set
             value(str): the content to be storred by th instance
+        Raises:
+            AttributeError: If the instance is not first_name
         """
+
         if name == 'first_name':
             super().__setattr__(name, value)
         else:
