@@ -18,7 +18,7 @@ class LockedClass:
             value(str): the content to be storred by th instance
         """
         if name == 'first_name':
-            self.__dict__[name] = value
+            super().__setattr__(name, value)
         else:
             raise AttributeError("'{}' object has no attribute '{}'"
                                  .format(self.__class__.__name__, name))
