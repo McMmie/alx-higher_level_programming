@@ -1,8 +1,1 @@
 262
-In CPython, which is the reference implementation of Python, integers are cached and reused for small values in the range of -5 to 256. This means that these integers are created once and then reused throughout the lifetime of the Python process.
-
-Before the execution of line 2 (print("Love")), the following int objects will have been created and are still in memory:
-
-Integer object for 0 (since you have not used any integer literals or calculations in your code).
-Integer objects for -5 through 256 (due to caching).
-So, there would be 262 integer objects (including 0 and the cached values from -5 to 256) in memory before line 2 is executed.
