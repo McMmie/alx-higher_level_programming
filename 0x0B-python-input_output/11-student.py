@@ -42,5 +42,5 @@ class Student:
         this is a method that replaces all attributes
         """
 
-        for key, vals in json:
+        for key, vals in json.items():
             setattr(self, key, vals)
