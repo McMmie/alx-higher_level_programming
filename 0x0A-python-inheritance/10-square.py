@@ -9,8 +9,6 @@ class BaseGeometry:
     My Empty Class
     """
 
-
-
     def integer_validator(self, name, value):
         """
         validates a value
@@ -22,6 +20,7 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         elif value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+
 
 class Rectangle(BaseGeometry):
     """
@@ -39,8 +38,8 @@ class Rectangle(BaseGeometry):
 
         BaseGeometry.__init__(self)
 
-        self.integer_validator("width",self.__width)
-        self.integer_validator("height",self.__height)
+        self.integer_validator("width", self.__width)
+        self.integer_validator("height", self.__height)
 
     def area(self):
         """
@@ -56,6 +55,7 @@ class Rectangle(BaseGeometry):
 
         return ('[Rectangle] {}/{}'.format(self.__width, self.__height))
 
+
 class Square(Rectangle):
     """
     A new class that inherits from the rectangle class
@@ -69,8 +69,4 @@ class Square(Rectangle):
 
         self.__size = size
 
-#        width = height = self.__size
-
-
         self.integer_validator("size", self.__size)
-

@@ -54,3 +54,26 @@ class Rectangle(BaseGeometry):
         """
 
         return ('[Rectangle] {}/{}'.format(self.__width, self.__height))
+
+
+class Square(Rectangle):
+    """
+    A new class that inherits from the rectangle class
+    """
+
+    def __init__(self, size):
+        """
+        instatiation of size
+        """
+        Rectangle.__init__(self, size, size)
+
+        self.__size = size
+
+        self.integer_validator("size", self.__size)
+
+    def __str__(self):
+        """
+        returns a specific format
+        """
+
+        return ('[Square] {}/{}'.format(self.__size, self.__size))
