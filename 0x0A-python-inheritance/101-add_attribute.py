@@ -11,7 +11,7 @@ def add_attribute(a_class, attr, value):
     """
 
     if hasattr(a_class, '__dict__'):
- 
+
         setattr(a_class, attr, value)
 
     else:
