@@ -2,7 +2,6 @@
 """
 an interview technichal
 """
-import math
 
 
 def pascal_triangle(n):
