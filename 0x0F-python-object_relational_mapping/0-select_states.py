@@ -7,10 +7,11 @@ import sys
 
 
 argv = sys.argv
-db = MySQLdb.connect(host=LOCALHOST, port=3306, user=argv[0], passwd=argv[1], db=argv[2])
+db = MySQLdb.connect(host='localhost', port=3306, user=argv[1], passwd=argv[2], db=argv[3])
 cur = db.cursor()
 cur.execute("SELECT * from states")
 states = cur.fetchall()
-print(states)
+for rows in states:
+    print(rows)
 cur.close()
 db.close()
