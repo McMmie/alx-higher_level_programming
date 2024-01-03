@@ -21,7 +21,7 @@ request(apiUrl, { json: true }, (error, response, body) => {
     console.error(`Error: ${response.statusCode} - ${body.detail}`);
     process.exit(1); // Exit with an error code
   }
-
+  body = JSON.parse(body);
   const movieTitle = body.title;
   console.log(movieTitle);
 });
