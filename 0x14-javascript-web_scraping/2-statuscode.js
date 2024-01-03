@@ -3,7 +3,9 @@
 
 const request = require('request')
 
-request(process.argv[2])
+if (process.argv.length !== 2) {
+	    console.error('Usage: ./script.js <url>');
+request(process.argv[1])
 .on('response', function(response) {
     console.log('code: ', response.statusCode) // <--- Here 200
 })
