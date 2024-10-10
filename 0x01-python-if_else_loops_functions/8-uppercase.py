@@ -5,5 +5,5 @@ def uppercase(str):
         if (char >= 97) & (char <= 122):
             char = char - 32
         char = chr(char)
-        print(f"{char}", end='')
-    print(f"")
+        print("{}".format(char), end='')
+    print("".format())
