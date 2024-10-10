@@ -6,6 +6,7 @@ rem = number[-1]
 rem = int(rem)
 if int(number) < 0:
     rem = -(rem)
+number = int(number)
 if rem > 5:
     print(f"Last digit of {number} is {rem} and is greater than 5")
 elif rem == 0:
