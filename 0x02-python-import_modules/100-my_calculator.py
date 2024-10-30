@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == '__main__':
-    
+
     import sys
     import calculator_1 as calc
 
@@ -15,15 +15,15 @@ if __name__ == '__main__':
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
-    a = int(sys.argv[1]) 
+    a = int(sys.argv[1])
     operatr = sys.argv[2]
     b = int(sys.argv[3])
 
     if operatr == '+':
-            print(f'{a} + {b} = {calc.add(a, b)}')
-    elif operatr =='-':
-            print(f'{a} - {b} = {calc.sub(a, b)}')
+        print(f'{a} + {b} = {calc.add(a, b)}')
+    elif operatr == '-':
+        print(f'{a} - {b} = {calc.sub(a, b)}')
     elif operatr == '*':
-            print(f'{a} * {b} = {calc.mul(a, b)}')
+        print(f'{a} * {b} = {calc.mul(a, b)}')
     elif operatr == '/':
-            print(f'{a} / {b} = {calc.div(a, b)}')
+        print(f'{a} / {b} = {calc.div(a, b)}')
