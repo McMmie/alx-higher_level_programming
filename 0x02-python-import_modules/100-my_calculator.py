@@ -6,7 +6,6 @@ if __name__ == '__main__':
     import calculator_1 as calc
 
     operators = ['+', '-', '*', '/']
-    print(sys.argv[2])
 
     if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
@@ -16,14 +15,15 @@ if __name__ == '__main__':
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
-    a, b = int(sys.argv[1]), int(sys.argv[3])
+    a = int(sys.argv[1]) 
+    operatr = sys.argv[2]
+    b = int(sys.argv[3])
 
-    match sys.argv[2]:
-        case '+':
+    if operatr == '+':
             print(f'{a} + {b} = {calc.add(a, b)}')
-        case '-':
+    elif operatr =='-':
             print(f'{a} - {b} = {calc.sub(a, b)}')
-        case '*':
+    elif operatr == '*':
             print(f'{a} * {b} = {calc.mul(a, b)}')
-        case '/':
+    elif operatr == '/':
             print(f'{a} / {b} = {calc.div(a, b)}')
