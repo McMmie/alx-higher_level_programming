@@ -13,5 +13,5 @@ or:
 if __name__ == '__main__':
     import hidden_4 as hidden
     for attributes in dir(hidden):
-        if '__' not in attributes:
+        if not attributes.startswith('__'):
             print(attributes)
